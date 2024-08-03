@@ -1,0 +1,23 @@
+package org.mounanga.accounting.common.enums;
+
+public enum AssetType {
+    CASH,
+    ACCOUNTS_RECEIVABLE,
+    INVENTORY,
+    PREPAID_EXPENSES,
+    LAND,
+    BUILDINGS,
+    MACHINERY,
+    VEHICLES,
+    OFFICE_EQUIPMENT,
+    FURNITURE,
+    PATENTS,
+    TRADEMARKS,
+    GOODWILL,
+    INVESTMENTS,
+    BONDS,
+    MUTUAL_FUNDS,
+    LONG_TERM_RECEIVABLES,
+    DEFERRED_TAX_ASSETS,
+    OTHER
+}
