@@ -1,53 +1,69 @@
-```markdown
-# Asset, Liability, and Balance Sheet Management
+# Asset and Liability Management Application
 
-## Description
-
-This application is designed to manage assets, liabilities, and balance sheets. It is developed using Java 21, Spring Boot, Axon Framework, MySQL, and Axon Server for the backend. Angular is used for the frontend. The application is based on a CQRS (Command Query Responsibility Segregation) and Event Sourcing architecture.
+Welcome to the Asset and Liability Management Application! This application facilitates the management of assets, liabilities, and financial statements effectively. It is developed using Java 21, Spring Boot, Axon Framework, MySQL, and Axon Server, utilizing the CQRS (Command Query Responsibility Segregation) and Event Sourcing architecture patterns.
 
 ## Features
 
-- **Asset Management**: Track and manage company assets efficiently.
-- **Liability Management**: Monitor and manage financial obligations and debts.
-- **Balance Sheet**: Generate and view comprehensive balance sheets.
-- **CQRS Architecture**: Separate command and query responsibilities to optimize performance and scalability.
-- **Event Sourcing**: Capture all changes to application state as a sequence of events.
+- **Asset Management**: Track and manage various types of assets dynamically.
+- **Liability Management**: Efficiently handle and monitor liabilities over time.
+- **Financial Statement Management**: Generate and maintain balance sheets and financial statements.
+- **Automated Database Setup**: The database is created automatically upon application startup.
+- **Event Sourcing**: Captures all changes as events for reliable audit trails.
+- **CQRS**: Segregates command and query operations for improved scalability and performance.
 
-## Technologies Used
+## Prerequisites
 
-- **Backend**: Java 21, Spring Boot, Axon Framework, MySQL, Axon Server
-- **Frontend**: Angular
+Before running the application, ensure the following:
 
-## Getting Started
+- **Java 21**: Installed on your system.
+- **Axon Server**: Must be running before starting the application.
+- **MySQL**: Ensure MySQL is installed and accessible.
+- **Axon Console Credentials**: Modify the Axon Console credentials in the `application.properties` file.
 
-### Prerequisites
+## Installation and Setup
 
-- Java 21
-- Maven (for building Java projects)
-- Axon Server : https://www.axoniq.io/download
-
-### Installation
-
-1. Clone the repository:
-   ```bash
+1. **Clone the repository**:
+   ```sh
    git clone https://github.com/BrodyGaudel/accounting.git
-   cd accounting
+   cd asset-liability-management
    ```
 
-2. **Backend Setup**:
-   - Configure MySQL database settings in `application.properties`.
-   - Build and run the Spring Boot application:
-     ```bash
-     mvn spring-boot:run
-     ```
+2. **Configure Database and Axon Server**:
+    - Ensure MySQL is running and accessible.
+    - Start Axon Server before launching the application.
+    - Modify Axon Console credentials in `application.properties`:
+      ```properties
+      axon.axonserver.server=localhost:8024
+      axon.axonserver.token=your-axon-console-token
+      ```
 
+3. **Run the Application**:
+    - Use Maven or Gradle to build and run the application:
+      ```sh
+      mvn clean install
+      mvn spring-boot:run
+      ```
+      or
+      ```sh
+      gradle clean build
+      gradle bootRun
+      ```
 
-3. **Access the application**:
-   - Open a web browser and go to `http://localhost:8888/accounting/swagger-ui.html` to use the application.
+4. **Access the Application**:
+    - Once the application is running, access it through the configured endpoints.
+
+## Usage
+
+The application provides REST APIs to manage assets, liabilities, and financial statements. Detailed API documentation can be found at `[your-api-documentation-url]`.
 
 ## Contributing
 
-Contributions are welcome! Please fork the repository and submit a pull request.
+Contributions are welcome! Fork the repository, make improvements, and submit a pull request.
 
+## Author
 
-```
+- **Brody Gaudel MOUNANGA BOUKA**
+
+---
+
+Thank you for choosing the Asset and Liability Management Application. Manage your finances with ease!
